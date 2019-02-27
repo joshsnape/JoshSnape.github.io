@@ -1,13 +1,219 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>HTML basics</title>
-	</head>
-	<body>
-		<h1> Welcome to my portfolio</h1>
-		<h2> Basic info </h2>
-		<p> Test paragraph </p>
-	
-	</body>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Lucida Console'
+        }
+
+        .header {
+            display: grid;
+            grid-template-columns: 10fr 10fr;
+            text-align: center;
+            padding: 10px 16px;
+            background: #555;
+            color: #ffffff;
+            /*background-image: linear-gradient(bottom, #FFD51A 0%, #66a5ad 10%, #2d2f33 20%);
+            background-image: -o-linear-gradient(bottom, #2d2f33 0%, #66a5ad 10%, #2d2f33 20%);
+            background-image: -moz-linear-gradient(bottom, #2d2f33 0%, #66a5ad 10%, #2d2f33 20%);
+            background-image: -webkit-linear-gradient(bottom, #2d2f33 0%, #66a5ad 10%, #2d2f33 20%);
+            background-image: -ms-linear-gradient(bottom, #2d2f33 0% #66a5ad 10%, #2d2f33 20%);*/
+            background: -webkit-linear-gradient(bottom, #2d2f33 0%,#2d2f33 10%, #66a5ad 10%,#66a5ad 13%, #2d2f33 13%);
+            background: -moz-linear-gradient(bottom, #2d2f33 50%, #66a5ad 0%);
+            background: -ms-linear-gradient(bottom, #2d2f33 50%, #66a5ad 0%);
+            background: linear-gradient(bottom, #2d2f33 50%, #66a5ad 0%);
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+            .sticky + .content {
+                padding-top: 102px;
+            }
+
+        .row {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+
+        .column {
+            ms-flex: 25%;
+            flex: 25%;
+            max-width: 25%;
+            padding: 0 4px;
+        }
+
+            .column img {
+                margin-top: 8px;
+                vertical-align: middle;
+            }
+
+        .btn-hover {
+            background-color: transparent;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 16px;
+            vertical-align: baseline;
+        }
+
+            .btn-hover:hover {
+                background-image: -webkit-linear-gradient(bottom, #66a5ad 0%,#66a5ad 5%, #2d2f33 5%);
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-decoration: none;
+                vertical-align: baseline;
+                font-size: 16px;
+                vertical-align: baseline;
+            }
+            .Block-Left{
+                font-size:16px;
+            }
+        .thumbnail:hover {
+            position: relative;
+            top: -5px;
+            left: -5px;
+        }
+
+        @media screen and (max-width: 800px) {
+            .column {
+                -ms-flex: 50%;
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .column {
+                -ms-flex: 100%;
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+        img.Social-Icon{
+            vertical-align:baseline;
+            align-self:baseline;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="header" id="myHeader">
+        <div class="Block-Left" align="left">
+            <h1 font-size="16px">JOSHSNAPE.COM</h1>
+        </div>
+        <div class="Block-Right" align="right" vertical-align="baseline">
+            <button type="button" id="Button1" class="btn-hover">ABOUT ME</button>
+            <button type="button" id="Button1" class="btn-hover">HOME</button>
+            <button type="button" id="Button1" class="btn-hover">BLOG</button>
+            <button type="button" id="Button1" class="btn-hover">OTHER PROJECTS</button>
+            <button type="button" id="Button1" class="btn-hover">PORTFOLIO</button>
+            <img src="Images/LinkedIn-SocialIcon.png" onmouseover="this.src = 'Images/LinkedIn-SocialIcon-Hover.png'" onmouseout="this.src = 'Images/LinkedIn-SocialIcon.png'" class="Social-Icon" height="30" width="30">
+        </div>
+
+    </div>
+
+    <a href="#section2">Click Me to Smooth Scroll to Section 2 Below</a>
+    <!-- Photo Grid -->
+    <div class="row">
+        <div class="column">
+            <a href="index.html">
+                <img src="Images/demo.jpg" onmouseover="this.src = 'https://j.gifs.com/1WjN0o.gif'" onmouseout="this.src = 'Images/demo.jpg'" class="thumbnail" style="width:100%">
+            </a>
+            <img src="Images/Test.png" class="thumbnail" style="width:100%">
+            <img src="Images/Test.png" class="thumbnail" style="width:100%">
+            <img src="Images/Test.png" class="thumbnail" style="width:100%">
+            <img src="Images/Test.png" class="thumbnail" style="width:100%">
+            <img src="Images/Test.png" class="thumbnail" style="width:100%">
+            <img src="Images/Test.png" class="thumbnail" style="width:100%">
+        </div>
+        <div class="column">
+            <img src="Images/Test.png" class="thumbnail" style="width:100%">
+            <img src="Images/Test.png" class="thumbnail" style="width:100%">
+            <img src="Images/Test.png" class="thumbnail" style="width:100%">
+            <img src="Images/Test.png" class="thumbnail" style="width:100%">
+            <img src="Images/Test.png" class="thumbnail" style="width:100%">
+            <img src="Images/Test.png" class="thumbnail" style="width:100%">
+            <img src="Images/Test.png" class="thumbnail" style="width:100%">
+        </div>
+        <div class="column">
+            <img src="Images/Test.png" class="thumbnail" style="width:100%">
+            <img src="Images/Test.png" class="thumbnail" style="width:100%">
+            <img src="Images/Test.png" class="thumbnail" style="width:100%">
+            <img src="Images/Test.png" class="thumbnail" style="width:100%">
+            <img src="Images/Test.png" class="thumbnail" style="width:100%">
+            <img src="Images/Test.png" class="thumbnail" style="width:100%">
+            <img src="Images/Test.png" class="thumbnail" style="width:100%">
+        </div>
+        <div class="column">
+            <img src="Images/Test.png" class="thumbnail" style="width:100%">
+            <img src="Images/Test.png" class="thumbnail" style="width:100%">
+            <img src="Images/Test.png" class="thumbnail" style="width:100%">
+            <img src="Images/Test.png" class="thumbnail" style="width:100%">
+            <img src="Images/Test.png" class="thumbnail" style="width:100%">
+            <img src="Images/Test.png" class="thumbnail" style="width:100%">
+            <img src="Images/Test.png" class="thumbnail" style="width:100%">
+        </div>
+    </div>
+    <div id="section2"> Welcome to the website</div>
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
 </html>
