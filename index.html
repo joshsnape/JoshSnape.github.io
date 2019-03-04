@@ -42,20 +42,18 @@
 
         .header {
             display: grid;
-            grid-template-columns: 10fr 10fr;
+            grid-template-columns: auto auto;
+            align-items: baseline;
             text-align: center;
             padding: 10px 16px;
             background: #555;
+            vertical-align: baseline;
             color: #ffffff;
-            /*background-image: linear-gradient(bottom, #FFD51A 0%, #66a5ad 10%, #2d2f33 20%);
-            background-image: -o-linear-gradient(bottom, #2d2f33 0%, #66a5ad 10%, #2d2f33 20%);
-            background-image: -moz-linear-gradient(bottom, #2d2f33 0%, #66a5ad 10%, #2d2f33 20%);
-            background-image: -webkit-linear-gradient(bottom, #2d2f33 0%, #66a5ad 10%, #2d2f33 20%);
-            background-image: -ms-linear-gradient(bottom, #2d2f33 0% #66a5ad 10%, #2d2f33 20%);*/
             background: -webkit-linear-gradient(bottom, #2d2f33 0%,#2d2f33 10%, #66a5ad 10%,#66a5ad 13%, #2d2f33 13%);
             background: -moz-linear-gradient(bottom, #2d2f33 50%, #66a5ad 0%);
             background: -ms-linear-gradient(bottom, #2d2f33 50%, #66a5ad 0%);
             background: linear-gradient(bottom, #2d2f33 50%, #66a5ad 0%);
+            z-index: 99;
         }
 
         .sticky {
@@ -96,22 +94,29 @@
             text-decoration: none;
             vertical-align: baseline;
             font-size: 16px;
-            vertical-align: baseline;
         }
 
             .btn-hover:hover {
                 background-image: -webkit-linear-gradient(bottom, #66a5ad 0%,#66a5ad 5%, #2d2f33 5%);
                 border: none;
-                color: white;
+                color: #66a5ad;
                 padding: 15px 32px;
                 text-decoration: none;
                 vertical-align: baseline;
                 font-size: 16px;
                 vertical-align: baseline;
             }
-            .Block-Left{
-                font-size:16px;
-            }
+
+        .Block-Left {
+            font-size: 16px;
+            align-items: baseline;
+        }
+
+        .Block-Right {
+            height: 50px;
+            align-items: baseline;
+        }
+
         .thumbnail:hover {
             position: relative;
             top: -5px;
@@ -133,9 +138,34 @@
                 max-width: 100%;
             }
         }
-        img.Social-Icon{
-            vertical-align:baseline;
-            align-self:baseline;
+
+        .AboutMe {
+            padding: 10px 16px;
+            background-color: #E2E2E2;
+        }
+        .Portfolio {
+            padding: 10px 16px;
+            background-color: #E2E2E2;
+        }
+
+        .Linebreaks {
+            background-color: #555555;
+            height: 3px;
+            width: 75%;
+            opacity: 0.5;
+        }
+        .Main {
+            background-color: #E2E2E2;
+        }
+        .Sub-Heading {
+            font-size: 32px;
+            color: black;
+            text-align: center;
+        }
+        .StandardText {
+            font-size: 16px;
+            color: black;
+            text-align: center;
         }
     </style>
 </head>
@@ -147,60 +177,130 @@
         <div class="Block-Left" align="left">
             <h1 font-size="16px">JOSHSNAPE.COM</h1>
         </div>
-        <div class="Block-Right" align="right" vertical-align="baseline">
-            <button type="button" id="Button1" class="btn-hover">ABOUT ME</button>
-            <button type="button" id="Button1" class="btn-hover">HOME</button>
-            <button type="button" id="Button1" class="btn-hover">BLOG</button>
-            <button type="button" id="Button1" class="btn-hover">OTHER PROJECTS</button>
-            <button type="button" id="Button1" class="btn-hover">PORTFOLIO</button>
-            <img src="Images/LinkedIn-SocialIcon.png" onmouseover="this.src = 'Images/LinkedIn-SocialIcon-Hover.png'" onmouseout="this.src = 'Images/LinkedIn-SocialIcon.png'" class="Social-Icon" height="30" width="30">
-        </div>
-
+    <div class="Block-Right" align="right" vertical-align="baseline">
+        <a href="#AboutMe"><button type="button" id="Button1" class="btn-hover">ABOUT ME</button></a>
+        <a href="#section2"><button type="button" id="Button1" class="btn-hover">HOME</button></a>
+        <a href="#Blog"><button type="button" id="Button1" class="btn-hover">BLOG</button></a>
+        <a href="#OtherProjects"><button type="button" id="Button1" class="btn-hover">OTHER PROJECTS</button></a>
+        <a href="#Portfolio"><button type="button" id="Button1" class="btn-hover">PORTFOLIO</button></a>
+        <a href="https://www.linkedin.com/in/joshua-snape-6b4613109"><img src="Images/LinkedIn-SocialIcon.png" onmouseover="this.src = 'Images/LinkedIn-SocialIcon-Hover.png'" onmouseout="this.src = 'Images/LinkedIn-SocialIcon.png'" class="Social-Icon" height="30" width="30"></a>
     </div>
 
-    <a href="#section2">Click Me to Smooth Scroll to Section 2 Below</a>
-    <!-- Photo Grid -->
-    <div class="row">
-        <div class="column">
-            <a href="index.html">
-                <img src="Images/demo.jpg" onmouseover="this.src = 'https://j.gifs.com/1WjN0o.gif'" onmouseout="this.src = 'Images/demo.jpg'" class="thumbnail" style="width:100%">
-            </a>
-            <img src="Images/Test.png" class="thumbnail" style="width:100%">
-            <img src="Images/Test.png" class="thumbnail" style="width:100%">
-            <img src="Images/Test.png" class="thumbnail" style="width:100%">
-            <img src="Images/Test.png" class="thumbnail" style="width:100%">
-            <img src="Images/Test.png" class="thumbnail" style="width:100%">
-            <img src="Images/Test.png" class="thumbnail" style="width:100%">
+</div>
+
+
+
+    <div class="Main">
+        <div id="AboutMe" class="AboutMe">
+
+            <h1 class="Sub-Heading">ABOUT ME</h1>
+            <hr class="Linebreaks">
+            <p class="StandardText">
+                "Add text about self here"
+            </p>
         </div>
-        <div class="column">
-            <img src="Images/Test.png" class="thumbnail" style="width:100%">
-            <img src="Images/Test.png" class="thumbnail" style="width:100%">
-            <img src="Images/Test.png" class="thumbnail" style="width:100%">
-            <img src="Images/Test.png" class="thumbnail" style="width:100%">
-            <img src="Images/Test.png" class="thumbnail" style="width:100%">
-            <img src="Images/Test.png" class="thumbnail" style="width:100%">
-            <img src="Images/Test.png" class="thumbnail" style="width:100%">
+
+        <div id="Portfolio" class="Portfolio">
+
+            <h1 class="Sub-Heading">PORTFOLIO</h1>
+            <hr class="Linebreaks">
+            <div id="Highlights" class="Highlights">
+                <h1 class="Sub-Heading">HIGHLIGHTS</h1>
+                <hr class="Linebreaks">
+                <p class="StandardText">
+                    "Add Highlight Portfolio Projects Here"
+                </p>
+                <div class="row">
+                    <div class="column">
+                        <a href="index.html">
+                            <img src="Images/demo.jpg" onmouseover="this.src = 'https://j.gifs.com/1WjN0o.gif'" onmouseout="this.src = 'Images/demo.jpg'" class="thumbnail" style="width:100%">
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="index.html">
+                            <img src="Images/demo.jpg" onmouseover="this.src = 'https://j.gifs.com/1WjN0o.gif'" onmouseout="this.src = 'Images/demo.jpg'" class="thumbnail" style="width:100%">
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="index.html">
+                            <img src="Images/demo.jpg" onmouseover="this.src = 'https://j.gifs.com/1WjN0o.gif'" onmouseout="this.src = 'Images/demo.jpg'" class="thumbnail" style="width:100%">
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="index.html">
+                            <img src="Images/demo.jpg" onmouseover="this.src = 'https://j.gifs.com/1WjN0o.gif'" onmouseout="this.src = 'Images/demo.jpg'" class="thumbnail" style="width:100%">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="Portfolio-Main" class="Portfolio-Main">
+                <h1 class="Sub-Heading"></h1>
+                <hr class="Linebreaks">
+                <p class="StandardText">
+                    "Add Highlight Portfolio Projects Here"
+                </p>
+                <div class="row">
+                    <div class="column">
+                        <a href="index.html">
+                            <img src="Images/demo.jpg" onmouseover="this.src = 'https://j.gifs.com/1WjN0o.gif'" onmouseout="this.src = 'Images/demo.jpg'" class="thumbnail" style="width:100%">
+                        </a>
+                        <img src="Images/Test.png" class="thumbnail" style="width:100%">
+                        <img src="Images/Test.png" class="thumbnail" style="width:100%">
+                        <img src="Images/Test.png" class="thumbnail" style="width:100%">
+                        <img src="Images/Test.png" class="thumbnail" style="width:100%">
+                        <img src="Images/Test.png" class="thumbnail" style="width:100%">
+                        <img src="Images/Test.png" class="thumbnail" style="width:100%">
+                    </div>
+                    <div class="column">
+                        <img src="Images/Test.png" class="thumbnail" style="width:100%">
+                        <img src="Images/Test.png" class="thumbnail" style="width:100%">
+                        <img src="Images/Test.png" class="thumbnail" style="width:100%">
+                        <img src="Images/Test.png" class="thumbnail" style="width:100%">
+                        <img src="Images/Test.png" class="thumbnail" style="width:100%">
+                        <img src="Images/Test.png" class="thumbnail" style="width:100%">
+                        <img src="Images/Test.png" class="thumbnail" style="width:100%">
+                    </div>
+                    <div class="column">
+                        <img src="Images/Test.png" class="thumbnail" style="width:100%">
+                        <img src="Images/Test.png" class="thumbnail" style="width:100%">
+                        <img src="Images/Test.png" class="thumbnail" style="width:100%">
+                        <img src="Images/Test.png" class="thumbnail" style="width:100%">
+                        <img src="Images/Test.png" class="thumbnail" style="width:100%">
+                        <img src="Images/Test.png" class="thumbnail" style="width:100%">
+                        <img src="Images/Test.png" class="thumbnail" style="width:100%">
+                    </div>
+                    <div class="column">
+                        <img src="Images/Test.png" class="thumbnail" style="width:100%">
+                        <img src="Images/Test.png" class="thumbnail" style="width:100%">
+                        <img src="Images/Test.png" class="thumbnail" style="width:100%">
+                        <img src="Images/Test.png" class="thumbnail" style="width:100%">
+                        <img src="Images/Test.png" class="thumbnail" style="width:100%">
+                        <img src="Images/Test.png" class="thumbnail" style="width:100%">
+                        <img src="Images/Test.png" class="thumbnail" style="width:100%">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="column">
-            <img src="Images/Test.png" class="thumbnail" style="width:100%">
-            <img src="Images/Test.png" class="thumbnail" style="width:100%">
-            <img src="Images/Test.png" class="thumbnail" style="width:100%">
-            <img src="Images/Test.png" class="thumbnail" style="width:100%">
-            <img src="Images/Test.png" class="thumbnail" style="width:100%">
-            <img src="Images/Test.png" class="thumbnail" style="width:100%">
-            <img src="Images/Test.png" class="thumbnail" style="width:100%">
+       
+        <div id="OtherProjects" class="AboutMe">
+
+            <h1 class="Sub-Heading">OTHER PROJECTS</h1>
+            <hr class="Linebreaks">
+            <p class="StandardText">
+                "Add text about self here"
+            </p>
         </div>
-        <div class="column">
-            <img src="Images/Test.png" class="thumbnail" style="width:100%">
-            <img src="Images/Test.png" class="thumbnail" style="width:100%">
-            <img src="Images/Test.png" class="thumbnail" style="width:100%">
-            <img src="Images/Test.png" class="thumbnail" style="width:100%">
-            <img src="Images/Test.png" class="thumbnail" style="width:100%">
-            <img src="Images/Test.png" class="thumbnail" style="width:100%">
-            <img src="Images/Test.png" class="thumbnail" style="width:100%">
+        <div id="Blog" class="AboutMe">
+
+            <h1 class="Sub-Heading">BLOG</h1>
+            <hr class="Linebreaks">
+            <p class="StandardText">
+                "Add text about self here"
+            </p>
         </div>
     </div>
-    <div id="section2"> Welcome to the website</div>
+
+    
     <script>
         window.onscroll = function () { myFunction() };
 
